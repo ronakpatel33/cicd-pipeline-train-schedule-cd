@@ -1,6 +1,6 @@
 - name: "transfer zip to remote machine"
   hosts: webservers
   gather_facts: False
-  sudo: no
+  become: yes
   roles:
    - copyartifacts
