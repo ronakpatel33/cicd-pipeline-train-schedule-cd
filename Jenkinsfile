@@ -8,5 +8,12 @@ pipeline {
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
-    }
+	stage('deploy') {
+            steps {
+                sh 'cd ansible-scripts; \
+                    chmod 755 copy_artifacts.sh; \
+                    ./copy_artifacts.sh'
+            }
+        }    
+}
 }
