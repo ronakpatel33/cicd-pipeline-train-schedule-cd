@@ -2,6 +2,5 @@
   hosts: webservers
   gather_facts: False
   become: yes
-  become_user: ec2-user
   roles:
    - copyartifacts
