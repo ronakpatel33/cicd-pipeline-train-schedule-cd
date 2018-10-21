@@ -1,0 +1,3 @@
+---
+- name: "Transfer file to tmp directory"
+  copy: src=dist/trainSchedule.zip dest=/tmp
