@@ -10,6 +10,7 @@ pipeline {
         }
 	stage('deploy') {
             steps {
+		echo 'Running deployments automation'
                 sh 'cd ansible-scripts; \
                     chmod 755 copy_artifacts.sh; \
                     ./copy_artifacts.sh'
